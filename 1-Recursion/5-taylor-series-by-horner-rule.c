@@ -7,10 +7,10 @@
 //  using static variable in recursion
 double taylor(int x, int n)
 {
-    static int ele=1;
+    static double ele;
     if(n>0)
     {
-        ele =1+ (x/n)*ele;
+        ele =1+ (x*ele)/n;
         return taylor(x,n-1);
     }
     else

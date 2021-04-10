@@ -3,6 +3,7 @@
 
 #include<stdio.h>
 #include<conio.h>
+#include<malloc.h>
 
 #define maximum 10
 
@@ -25,7 +26,7 @@ void main()
             max=A[i];
     }
     int *C;
-    C=(int*)malloc(max*sizeof(int));
+    C=(int*)malloc((max+1)*sizeof(int));
 
     for(int i=0; i<n; i++)
     {
